@@ -11,7 +11,7 @@ namespace RealState.Application.Properties.Queries.GetProperties
 {
    public class GetPropertiesQueryHandler : IRequestHandler<GetPropertiesQuery, ErrorOr<List<PropertyBuilding>>>
     {
-        private readonly IPropertyBuildingRepository _repository;
+         private readonly IPropertyBuildingRepository _repository;
 
         public GetPropertiesQueryHandler(IPropertyBuildingRepository repository)
         {

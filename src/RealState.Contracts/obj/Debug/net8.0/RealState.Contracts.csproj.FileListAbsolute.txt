@@ -9,3 +9,15 @@ C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Contracts\obj\D
 C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Contracts\obj\Debug\net8.0\refint\RealState.Contracts.dll
 C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.pdb
 C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Contracts\obj\Debug\net8.0\ref\RealState.Contracts.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\bin\Debug\net8.0\RealState.Contracts.deps.json
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\bin\Debug\net8.0\RealState.Contracts.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\bin\Debug\net8.0\RealState.Contracts.pdb
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.AssemblyInfoInputs.cache
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.AssemblyInfo.cs
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.sourcelink.json
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\refint\RealState.Contracts.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\RealState.Contracts.pdb
+C:\Users\atac1\source\repos\RealStateApp\RealState\RealState\src\RealState.Contracts\obj\Debug\net8.0\ref\RealState.Contracts.dll

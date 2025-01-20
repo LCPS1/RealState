@@ -1,16 +1,16 @@
 @RealState.Api_HostAddress=https://localhost:7088
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwZTNjYjE2ZC0wY2QxLTRkMTQtYTA1Yi05YWE0YmZkZDJiNTkiLCJnaXZlbl9uYW1lIjoiU2FpdGFtYSIsImZhbWlseV9uYW1lIjoiU2VwIiwianRpIjoiNjcxNmM1OGItNzlmYi00YWE0LWJmODItNGJiNzFjODcyMTA5IiwiZXhwIjoxNzM3MzE2NzE0LCJpc3MiOiJSZWFsU3RhdGUiLCJhdWQiOiJSZWFsU3RhdGUifQ.bYKEnKLhnzcyJc0QIT3D4IvoGnOgbUhhhu_J6IhH1FM
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTkzOGJlZC1iMDI5LTRkNWEtYWM3Mi1hNDc3NDgyNWU2NzgiLCJnaXZlbl9uYW1lIjoiU2FpdGFtYSIsImZhbWlseV9uYW1lIjoiU2VwIiwianRpIjoiMDkyODQ4M2QtYjE4MS00M2IyLWE5NjEtZDM0MThlODZmYzI0IiwiZXhwIjoxNzM3Mzg3NTA0LCJpc3MiOiJSZWFsU3RhdGUiLCJhdWQiOiJSZWFsU3RhdGUifQ.BPJGkbcYaLz-YgkPik2TjJIBce6A0fuFWFK1cuVK17w
 
 POST {{RealState.Api_HostAddress}}/properties/filter
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "Name": ,
+    "Name":"Luxury Downtown Apartment",
     "MinPrice": 0,
-    "MaxPrice": 100000000000,
-    "City": ,
-    "Year": ,
+    "MaxPrice": 100000000,
+    "City": "New York",
+    "Year": 2020,
     "Page": 1,
     "PageSize": 10
 }

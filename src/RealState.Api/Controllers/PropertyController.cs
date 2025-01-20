@@ -76,9 +76,10 @@ namespace RealState.Api.Controllers
 
         
         [HttpPost("filter")]
-        public async Task<IActionResult> GetAllFiltered([FromQuery] GetPropertiesRequest request)
+        public async Task<IActionResult> GetAllFiltered([FromBody] GetPropertiesRequest request)
         {
             var query = request.Adapt<GetPropertiesQuery>();
+            Console.WriteLine($"Mapped Query: {query}");
             var result = await _mediator.Send(query);
 
             return result.Match(

@@ -110,6 +110,21 @@ namespace RealState.Api.Common.Mapping.Properties
             config.NewConfig<(List<PropertyBuilding> Properties, int TotalCount), GetPropertiesResponse>()
                 .Map(dest => dest.Properties, src => src.Properties.Adapt<List<PropertyDTO>>())
                 .Map(dest => dest.TotalCount, src => src.TotalCount);
+
+
+               // Map PropertyBuilding entity to PropertyDTO
+        config.NewConfig<PropertyBuilding, PropertyDTO>()
+            .Map(dest => dest.Id, src => src.Id)
+            .Map(dest => dest.Name, src => src.Name)
+            .Map(dest => dest.Address, src => src.Address.Adapt<AddressDTO>())
+            .Map(dest => dest.Price, src => src.Price.Adapt<PriceDTO>())
+            .Map(dest => dest.CodeInternal, src => src.CodeInternal)
+            .Map(dest => dest.Year, src => src.Year)
+            .Map(dest => dest.OwnerId, src => src.OwnerId);
+
+        // Map List<PropertyBuilding> to GetPropertiesResponse
+        config.NewConfig<List<PropertyBuilding>, GetPropertiesResponse>()
+            .Map(dest => dest.Properties, src => src.Adapt<List<PropertyDTO>>());
         }
     }
 }
