@@ -15,7 +15,6 @@ using RealState.Contracts.Properties.CreateProperty;
 using RealState.Contracts.Properties.GetProperties;
 using RealState.Contracts.Properties.PatchProceProperty;
 using RealState.Contracts.Properties.UpdateProperty;
-using Price = RealState.Application.Properties.Commands.PatchPriceProperty.Price;
 
 namespace RealState.Api.Controllers
 {
@@ -69,8 +68,8 @@ namespace RealState.Api.Controllers
             var result = await _mediator.Send(command);
 
             return result.Match(
-                property => Ok(_mapper.Map<Contracts.Common.DTOs.PropertyDTO>(property)), // Mapping the updated Property to DTO
-                errors => Problem(errors) // Handle any errors returned from the command handler
+                property => Ok(_mapper.Map<Contracts.Common.DTOs.PropertyDTO>(property)), 
+                errors => Problem(errors) 
             );
         }
 

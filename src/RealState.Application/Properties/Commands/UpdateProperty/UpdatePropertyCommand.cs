@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ErrorOr;
 using MediatR;
+using RealState.Application.Common.Models;
 using RealState.Domain.Entities;
 
 namespace RealState.Application.Properties.Commands.UpdateProperty
@@ -12,26 +13,12 @@ namespace RealState.Application.Properties.Commands.UpdateProperty
     (
         Guid Id,
         string Name,
-        Address Address,
-        Price Price,
+        AddressRequest Address,
+        PriceRequest Price,
         string CodeInternal,
         int Year,
         Guid OwnerId
     ) : IRequest<ErrorOr<PropertyBuilding>>;
 
-    public record Address
-    (
-        string Street,
-        string City ,
-        string ZipCode 
-    );
-
-    public record Price
-    (
-        decimal Amount,
-        string Currency
-    );
-
-         
     
 }

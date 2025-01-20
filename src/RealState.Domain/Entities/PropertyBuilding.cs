@@ -10,6 +10,9 @@ namespace RealState.Domain.Entities
 {
     public class PropertyBuilding : AggregateRoot
     {
+        private string v1;
+        private string v2;
+
         public string Name { get; private set; }
         public Address Address { get; private set; }
         public Price Price { get; private set; }
@@ -34,6 +37,12 @@ namespace RealState.Domain.Entities
             OwnerId = ownerId;
 
             AddDomainEvent(new PropertyBuildingCreated(this));
+        }
+
+        public PropertyBuilding(string v1, string v2)
+        {
+            this.v1 = v1;
+            this.v2 = v2;
         }
 
         public void ChangePrice(Price newPrice)

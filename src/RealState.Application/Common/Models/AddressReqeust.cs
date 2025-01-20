@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace RealState.Application.Common.Models
 {
-    public class Address
-    {
-        
-    }
+   public record AddressRequest
+    (
+        string Street,
+        string City ,
+        string ZipCode 
+    );
 }

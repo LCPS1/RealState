@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Mapster;
 using RealState.Application.Properties.Commands.CreateProperty;
 using RealState.Application.Properties.Commands.UpdateProperty;
-using RealState.Application.Properties.Commands.PatchPriceProperty; // Include the PatchPricePropertyCommand namespace
+using RealState.Application.Properties.Commands.PatchPriceProperty; 
 using RealState.Application.Properties.Queries.GetProperties;
 using RealState.Contracts.Common.DTOs;
 using RealState.Contracts.Properties.CreateProperty;
@@ -11,14 +11,11 @@ using RealState.Contracts.Properties.GetProperties;
 using RealState.Contracts.Properties.UpdateProperty;
 using RealState.Domain.Entities;
 using RealState.Domain.ValueObjects;
+using RealState.Application.Common.Models;
 
 // Aliases to resolve ambiguity
-using CreatePropertyAddress = RealState.Application.Properties.Commands.CreateProperty.Address;
-using UpdatePropertyAddress = RealState.Application.Properties.Commands.UpdateProperty.Address;
-using CreatePropertyPrice = RealState.Application.Properties.Commands.CreateProperty.Price;
-using UpdatePropertyPrice = RealState.Application.Properties.Commands.UpdateProperty.Price;
-using PatchPricePropertyPrice = RealState.Application.Properties.Commands.PatchPriceProperty.Price;
-using RealState.Contracts.Properties.PatchProceProperty; // Alias for PatchPriceProperty Price
+
+using RealState.Contracts.Properties.PatchProceProperty; 
 
 namespace RealState.Api.Common.Mapping.Properties
 {
@@ -35,21 +32,21 @@ namespace RealState.Api.Common.Mapping.Properties
         private void ConfigureValueObjects(TypeAdapterConfig config)
         {
             // Address Mapping
-            config.NewConfig<AddressDTO, CreatePropertyAddress>()
-                .MapWith(src => new CreatePropertyAddress(src.Street, src.City, src.ZipCode));
+            config.NewConfig<AddressDTO, AddressRequest>()
+                .MapWith(src => new AddressRequest(src.Street, src.City, src.ZipCode));
 
-            config.NewConfig<CreatePropertyAddress, AddressDTO>()
+            config.NewConfig<AddressRequest, AddressDTO>()
                 .MapWith(src => new AddressDTO(src.Street, src.City, src.ZipCode));
 
             // Price Mapping for Create Property
-            config.NewConfig<PriceDTO, CreatePropertyPrice>()
-                .MapWith(src => new CreatePropertyPrice(src.Amount, src.Currency));
+            config.NewConfig<PriceDTO, PriceRequest>()
+                .MapWith(src => new PriceRequest(src.Amount, src.Currency));
 
-            config.NewConfig<CreatePropertyPrice, PriceDTO>()
+            config.NewConfig<PriceRequest, PriceDTO>()
                 .MapWith(src => new PriceDTO(src.Amount, src.Currency));
 
             // Price Mapping for Patch Price Property (New Mapping)
-            config.NewConfig<PatchPricePropertyPrice, RealState.Domain.ValueObjects.Price>()
+            config.NewConfig<PriceRequest, RealState.Domain.ValueObjects.Price>()
                 .Map(dest => dest.Amount, src => src.Amount)
                 .Map(dest => dest.Currency, src => src.Currency);
         }
@@ -59,8 +56,8 @@ namespace RealState.Api.Common.Mapping.Properties
             // Create Property Command Mapping
             config.NewConfig<CreatePropertyRequest, CreatePropertyCommand>()
                 .Map(dest => dest.Name, src => src.Name)
-                .Map(dest => dest.Address, src => src.Address.Adapt<CreatePropertyAddress>())
-                .Map(dest => dest.Price, src => src.Price.Adapt<CreatePropertyPrice>())
+                .Map(dest => dest.Address, src => src.Address.Adapt<AddressRequest>())
+                .Map(dest => dest.Price, src => src.Price.Adapt<PriceRequest>())
                 .Map(dest => dest.CodeInternal, src => src.CodeInternal)
                 .Map(dest => dest.Year, src => src.Year)
                 .Map(dest => dest.OwnerId, src => src.OwnerId);
@@ -69,8 +66,8 @@ namespace RealState.Api.Common.Mapping.Properties
             config.NewConfig<(Guid Id, UpdatePropertyRequest Request), UpdatePropertyCommand>()
                 .Map(dest => dest.Id, src => src.Id)
                 .Map(dest => dest.Name, src => src.Request.Name)
-                .Map(dest => dest.Address, src => src.Request.Address.Adapt<UpdatePropertyAddress>())
-                .Map(dest => dest.Price, src => src.Request.Price.Adapt<UpdatePropertyPrice>())
+                .Map(dest => dest.Address, src => src.Request.Address.Adapt<AddressRequest>())
+                .Map(dest => dest.Price, src => src.Request.Price.Adapt<PriceRequest>())
                 .Map(dest => dest.CodeInternal, src => src.Request.CodeInternal)
                 .Map(dest => dest.Year, src => src.Request.Year)
                 .Map(dest => dest.OwnerId, src => src.Request.OwnerId);
@@ -78,7 +75,7 @@ namespace RealState.Api.Common.Mapping.Properties
             // Patch Price Property Command Mapping (New Mapping)
             config.NewConfig<PatchPricePropertyRequest, PatchPricePropertyCommand>()
                 .Map(dest => dest.Id, src => src.Id)
-                .Map(dest => dest.Price, src => src.Price.Adapt<PatchPricePropertyPrice>());
+                .Map(dest => dest.Price, src => src.Price.Adapt<PriceRequest>());
         }
 
         private void ConfigureQueries(TypeAdapterConfig config)
@@ -113,18 +110,18 @@ namespace RealState.Api.Common.Mapping.Properties
 
 
                // Map PropertyBuilding entity to PropertyDTO
-        config.NewConfig<PropertyBuilding, PropertyDTO>()
-            .Map(dest => dest.Id, src => src.Id)
-            .Map(dest => dest.Name, src => src.Name)
-            .Map(dest => dest.Address, src => src.Address.Adapt<AddressDTO>())
-            .Map(dest => dest.Price, src => src.Price.Adapt<PriceDTO>())
-            .Map(dest => dest.CodeInternal, src => src.CodeInternal)
-            .Map(dest => dest.Year, src => src.Year)
-            .Map(dest => dest.OwnerId, src => src.OwnerId);
+            config.NewConfig<PropertyBuilding, PropertyDTO>()
+                .Map(dest => dest.Id, src => src.Id)
+                .Map(dest => dest.Name, src => src.Name)
+                .Map(dest => dest.Address, src => src.Address.Adapt<AddressDTO>())
+                .Map(dest => dest.Price, src => src.Price.Adapt<PriceDTO>())
+                .Map(dest => dest.CodeInternal, src => src.CodeInternal)
+                .Map(dest => dest.Year, src => src.Year)
+                .Map(dest => dest.OwnerId, src => src.OwnerId);
 
-        // Map List<PropertyBuilding> to GetPropertiesResponse
-        config.NewConfig<List<PropertyBuilding>, GetPropertiesResponse>()
-            .Map(dest => dest.Properties, src => src.Adapt<List<PropertyDTO>>());
+            // Map List<PropertyBuilding> to GetPropertiesResponse
+            config.NewConfig<List<PropertyBuilding>, GetPropertiesResponse>()
+                .Map(dest => dest.Properties, src => src.Adapt<List<PropertyDTO>>());
         }
     }
 }
