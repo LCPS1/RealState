@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-RegisterCommandHandlerTests",
+      "appliesTo": "tests/UnitTets/RealState.Application.UnitTests/Authenticaiton/Commands/RegisterCommandHandlerTests.cs",
+      "type": "launch"
+    }
+  ]
+}

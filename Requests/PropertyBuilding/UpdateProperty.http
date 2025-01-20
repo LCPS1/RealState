@@ -1,0 +1,25 @@
+@RealState.Api_HostAddress=https://localhost:7088
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDk0YTNiZi01MjRiLTRjODEtODM3NS1lNDAxZTE0ODMxMTYiLCJnaXZlbl9uYW1lIjoiU2FpdGFtYSIsImZhbWlseV9uYW1lIjoiU2VwIiwianRpIjoiZjFlNjdkM2ItMGI5MC00NzU5LTliZDQtODkyNWQ2NzQwNjk5IiwiZXhwIjoxNzM3MzEyMzQ1LCJpc3MiOiJSZWFsU3RhdGUiLCJhdWQiOiJSZWFsU3RhdGUifQ.aZY9CyrTGoymOWO0pfdVYqdrVCgmwv_9ggjkKVVfA9g
+
+@id=54f3795e-b6cc-4477-9579-ad5ec4c2e0fa
+PUT {{RealState.Api_HostAddress}}/properties/{{id}}
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "Id": "54f3795e-b6cc-4477-9579-ad5ec4c2e0fa",
+    "Name": "Heavenyl Apartment",
+    "Address": {
+        "Street": "123 Main Street",
+        "City": "New York",
+        "ZipCode": "10001"
+    },
+    "Price": {
+        "Amount": 1000000,
+        "Currency": "USD"
+    },
+    "CodeInternal": "PDRES123",
+    "Year": 2023,
+    "OwnerId": "87c18371-ce95-40a8-b32e-39c3d8b16c94"
+}
+###

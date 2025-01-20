@@ -1,0 +1,23 @@
+@RealState.Api_HostAddress=https://localhost:7088
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWQwM2QzMy1lZWM3LTQyNzktODllYS05NTAyZTk0Yjc5NjYiLCJnaXZlbl9uYW1lIjoiU2FpdGFtYSIsImZhbWlseV9uYW1lIjoiU2VwIiwianRpIjoiZDJhM2IwZTQtZmRhNC00MmE1LTkwOTMtMGUzYzFkZjgwMmM5IiwiZXhwIjoxNzM3MzA2MTM0LCJpc3MiOiJSZWFsU3RhdGUiLCJhdWQiOiJSZWFsU3RhdGUifQ.zlnZoas8_FTAMFEsZqZdWKWwpb6gGnkO3pPdw3hWfmk
+POST {{RealState.Api_HostAddress}}/properties/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "Name": "Luxury Downtown Apartment",
+    "Address": {
+        "Street": "123 Main Street",
+        "City": "New York",
+        "ZipCode": "10001"
+    },
+    "Price": {
+        "Amount": 555523,
+        "Currency": "USD"
+    },
+    "CodeInternal": "PDRES123",
+    "Year": 2020,
+    "OwnerId": "87c18371-ce95-40a8-b32e-39c3d8b16c94"
+}
+
+###

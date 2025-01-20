@@ -1,0 +1,11 @@
+@RealState.Api_HostAddress = https://localhost:7088
+
+POST {{RealState.Api_HostAddress}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "saitama@gmail.com",
+    "password": "mypassword000"
+}
+
+###

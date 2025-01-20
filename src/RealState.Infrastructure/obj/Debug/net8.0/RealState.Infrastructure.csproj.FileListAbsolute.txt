@@ -1,0 +1,17 @@
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Infrastructure.deps.json
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Infrastructure.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Infrastructure.pdb
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Application.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Domain.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Application.pdb
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\bin\Debug\net8.0\RealState.Domain.pdb
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.AssemblyInfo.cs
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealStat.7C0D9004.Up2Date
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\refint\RealState.Infrastructure.dll
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\RealState.Infrastructure.pdb
+C:\Users\atac1\source\repos\RealStateApp\RealState\src\RealState.Infrastructure\obj\Debug\net8.0\ref\RealState.Infrastructure.dll

@@ -1,0 +1,20 @@
+@RealState.Api_HostAddress=https://localhost:7088
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Y2EyOGFhYS0zMWMzLTRiNjMtYjdjMy1iNTRhZTYwYTNjMzIiLCJnaXZlbl9uYW1lIjoiU2FpdGFtYSIsImZhbWlseV9uYW1lIjoiU2VwIiwianRpIjoiNTY1YmQ2OTYtNGM0NC00YzMxLTk3ZGItM2M3MzA4OGE1MjU5IiwiZXhwIjoxNzM3MjQ1MjM5LCJpc3MiOiJSZWFsU3RhdGUiLCJhdWQiOiJSZWFsU3RhdGUifQ.pnQA-4Yohjkw5zR7M-YSW5ObIJYpzMEk_wFZM_E4EvE
+@propertyOwnerID=adj
+
+POST {{RealState.Api_HostAddress}}/properties
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "Name": "Dawn of Victory",
+    "Description": "Best house in North West",
+    "Address": "Fake Street 1234 - DG 234 ",
+    "Price": "1000000.00",
+    "CodeInternal": 1,
+    "Year": 2024,
+    "CratedDateTime": "2025-12-15T00:00:00Z",
+    "PropertyOwnerId": "b8e325f7-6920-4240-8181-6153516f3da2"
+}
+
+###

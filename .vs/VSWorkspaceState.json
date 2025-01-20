@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\tests",
+    "\\tests\\UnitTets",
+    "\\tests\\UnitTets\\RealState.Application.UnitTests",
+    "\\tests\\UnitTets\\RealState.Application.UnitTests\\Authentication",
+    "\\tests\\UnitTets\\RealState.Application.UnitTests\\Authentication\\Commands"
+  ],
+  "SelectedNode": "\\tests\\UnitTets\\RealState.Application.UnitTests\\Authentication\\Commands\\RegisterCommandHandlerTests.cs",
+  "PreviewInSolutionExplorer": false
+}

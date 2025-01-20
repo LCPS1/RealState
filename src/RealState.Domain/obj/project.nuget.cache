@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "kkdjnn1xuM4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\atac1\\source\\repos\\RealStateApp\\RealState\\RealState\\src\\RealState.Domain\\RealState.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\atac1\\.nuget\\packages\\erroror\\2.0.1\\erroror.2.0.1.nupkg.sha512",
+    "C:\\Users\\atac1\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
+    "C:\\Users\\atac1\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\atac1\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

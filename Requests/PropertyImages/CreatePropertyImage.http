@@ -1,0 +1,13 @@
+@RealState.Api_HostAddress=https://localhost:7088
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4OTMyZTZkMS03YTE4LTRkZjgtYTk1MC0xZWExNzJhM2ZiNzIiLCJnaXZlbl9uYW1lIjoiU2FpdGFtYSIsImZhbWlseV9uYW1lIjoiU2VwIiwianRpIjoiNjdkNTUwMGEtMjRiZC00YTFkLTgwNTEtNDIxYmRjOGYxODUzIiwiZXhwIjoxNzM3MzIzNjUxLCJpc3MiOiJSZWFsU3RhdGUiLCJhdWQiOiJSZWFsU3RhdGUifQ.Rg96P_2cOC7usd9nb3rpWxkMb_ePaWO3sRChUZKBsSg
+POST {{RealState.Api_HostAddress}}/propertyimages
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "Name": "Sample Image",
+  "Description": "This is a sample image description",
+  "File": "image_file_data_or_path",
+  "Id": "54f3795e-b6cc-4477-9579-ad5ec4c2e0fa",
+  "IsEnabled": true
+}
