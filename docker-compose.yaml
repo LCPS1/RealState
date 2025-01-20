@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql-server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=realState123
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql-server-data:/var/opt/mssql
+    restart: always
+
+  api:
+    container_name: real-state-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=RealStateDB;User=sa;Password=realState123;
+    restart: on-failure
+    volumes:
+      - ./src/RealState.Api:/app
+    depends_on:
+      - db
+    command: ["dotnet", "RealState.Api.dll"]
+
+volumes:
+  sql-server-data:

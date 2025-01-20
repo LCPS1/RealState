@@ -31,7 +31,7 @@ namespace RealState.Infrastructure
         {
             var dbSettings = new DbSettings();
             services.AddDbContext<RealStateDbContext>(options =>
-                options.UseSqlServer("Server=localhost,1433;Database=RealState;User Id=sa;Password=RealState123;Encrypt=False")
+                options.UseSqlServer("Server=db;Database=RealStateDB;User=sa;Password=realState123;Encrypt=Falsee")
             );
 
           

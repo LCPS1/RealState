@@ -1,5 +1,4 @@
-@RealState.Api_HostAddress = https://localhost:7088
-
+@RealState.Api_HostAddress = http://localhost:5001
 POST {{RealState.Api_HostAddress}}/auth/register
 Content-Type: application/json
 
